@@ -7,3 +7,7 @@
 
 library eyflutter_cmi;
 
+// utils
+export 'utils/plugin_utils.dart';
+// widgets
+export 'widgets/launcher_widget.dart';

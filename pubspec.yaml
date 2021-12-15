@@ -1,20 +1,22 @@
 name: eyflutter_cmi
 description: flutter配置中间介
 version: 0.0.1
-homepage:
+homepage: https://github.com/eyinfo/eyflutter_cmi
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
-  flutter: ">=2.5.0"
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.20.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  eyflutter_core: ^0.0.1+8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
