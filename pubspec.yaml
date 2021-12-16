@@ -1,6 +1,6 @@
 name: eyflutter_cmi
 description: flutter配置中间介
-version: 0.0.1
+version: 0.0.1+1
 homepage: https://github.com/eyinfo/eyflutter_cmi
 
 environment:
