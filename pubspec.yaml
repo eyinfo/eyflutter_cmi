@@ -12,7 +12,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  eyflutter_core: ^0.0.1+8
+  eyflutter_core: ^0.0.1+10
 
 dev_dependencies:
   flutter_test:
