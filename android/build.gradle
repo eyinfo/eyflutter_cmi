@@ -32,19 +32,16 @@ android {
     defaultConfig {
         minSdkVersion 21
     }
-
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-            jni.srcDirs = []
-        }
-    }
-
-    dataBinding {
-        enabled = true
-    }
 }
 
 dependencies {
     api 'com.android.support:multidex:2.0.0'
+}
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
 }

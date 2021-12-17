@@ -1,10 +1,8 @@
 package com.eyflutter.eyflutter_cmi.bases;
 
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Bundle;
-import android.text.TextUtils;
 
 import androidx.multidex.MultiDex;
 
@@ -14,8 +12,6 @@ import com.cloud.eyutils.launchs.utils.ActivityUtils;
 import com.cloud.eyutils.logs.CrashHandler;
 import com.eyflutter.eyflutter_cmi.events.OnActivityCycleStatusCall;
 import com.eyflutter.eyflutter_cmi.events.OnApplicationLifecycle;
-
-import java.util.List;
 
 import io.flutter.app.FlutterApplication;
 
@@ -240,28 +236,6 @@ public abstract class BaseApplication extends FlutterApplication implements OnAp
             }
         }
         return isAppOnBackground;
-    }
-
-    /**
-     * 判断应用是否已启动
-     *
-     * @param componentInfo 组件信息
-     * @return true-启动;false-未启动;
-     */
-    public boolean isAppStarted(String componentInfo) {
-        if (TextUtils.isEmpty(componentInfo)) {
-            return false;
-        }
-        ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-        List<ActivityManager.RunningTaskInfo> activitys = activityManager.getRunningTasks(Integer.MAX_VALUE);
-        for (int i = 0; i < activitys.size(); i++) {
-            String baseAcivityName = activitys.get(i).baseActivity.toString();
-            // private String accessToken;
-            if (baseAcivityName.startsWith(componentInfo)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     @Override
