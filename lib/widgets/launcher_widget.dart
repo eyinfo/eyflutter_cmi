@@ -16,7 +16,7 @@ mixin OnLauncherListener {
 
 class LauncherWidget extends MaterialApp {
   final bool isPlugin;
-  final OnLauncherListener launcherListener;
+  final OnLauncherListener? launcherListener;
 
   LauncherWidget({this.isPlugin = false, this.launcherListener})
       : super(
@@ -31,7 +31,7 @@ class LauncherWidget extends MaterialApp {
           ],
           onUnknownRoute: (settings) => launcherListener?.onUnknownRoute(settings),
           localeResolutionCallback: (deviceLocale, supportedLocals) {
-            return launcherListener?.localeResCall(deviceLocale, supportedLocals);
+            return launcherListener?.localeResCall(deviceLocale!, supportedLocals);
           },
           localizationsDelegates: [
             LangLocalizationsDelegate(),

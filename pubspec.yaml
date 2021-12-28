@@ -1,10 +1,10 @@
 name: eyflutter_cmi
 description: flutter配置中间介
-version: 0.0.1+3
+version: 0.0.1+5
 homepage: https://github.com/eyinfo/eyflutter_cmi
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.15.0 <3.0.0"
   flutter: ">=1.20.0"
 
 dependencies:
@@ -12,8 +12,8 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  eyflutter_core: ^0.0.1+12
-  eyflutter_uikit: ^0.0.1+4
+  eyflutter_core: ^0.0.3+1
+  eyflutter_uikit: ^0.0.1+5
 
 dev_dependencies:
   flutter_test:

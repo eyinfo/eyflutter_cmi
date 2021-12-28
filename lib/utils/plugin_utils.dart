@@ -4,11 +4,10 @@ class PluginUtils {
   factory PluginUtils() => _getInstance();
 
   static PluginUtils get instance => _getInstance();
-  static PluginUtils _instance;
+  static PluginUtils? _instance;
 
   static PluginUtils _getInstance() {
-    _instance ??= new PluginUtils._internal();
-    return _instance;
+    return _instance ??= new PluginUtils._internal();
   }
 
   PluginUtils._internal();
